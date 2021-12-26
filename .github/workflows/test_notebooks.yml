@@ -29,6 +29,11 @@ jobs:
       run: |
         pip install -r requirements.txt
 
+    # Generate TOC
+    - name: Generate TOC
+      run: |
+        jupyter-book toc from-project .
+      
     # Build the book
     - name: Build the book
       run: |
